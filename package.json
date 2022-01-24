@@ -1,0 +1,28 @@
+{
+  "name": "Readit",
+  "version": "1.0.0",
+  "description": "Master Electron Project",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "watch": "nodemon --exec electron .",
+    "reset": "git reset --hard"
+  },
+  "homepage": "https://github.com/MonicaBartha/master-electron",
+  "repository": "https://github.com/MonicaBartha/master-electron",
+  "keywords": [
+    "Electron",
+    "Master Electron",
+    "demo"
+  ],
+  "author": "Monica Bartha",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^9.0.0",
+    "electron-builder": "^22.14.5",
+    "nodemon": "^2.0.0"
+  },
+  "dependencies": {
+    "electron-window-state": "^5.0.3"
+  }
+}
