@@ -9,8 +9,8 @@ HTML, CSS, JavaScript, Electron
 
 ### Views
 
-![Readit app]("/readit.png")
-![Readit menu]("/readit-menu.png")
+![Readit app]("/readit.PNG")</br>
+![Readit menu]("/readit-menu.PNG")
 
 ### To use
 
