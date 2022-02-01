@@ -4,13 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
+dist/
 
 # testing
 /coverage
-
-# next.js
-/.next/
-/out/
 
 # production
 /build
@@ -30,5 +27,5 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# vercel
-.vercel
+# certificate
+private/

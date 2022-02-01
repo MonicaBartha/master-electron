@@ -6,7 +6,10 @@
   "scripts": {
     "start": "electron .",
     "watch": "nodemon --exec electron .",
-    "reset": "git reset --hard"
+    "reset": "git reset --hard",
+    "build": "electron-builder -w",
+    "release": "electron-builder --win -p onTagOrDraft",
+    "win-cert": "electron-builder create-self-signed-cert -p stackacademy.tv"
   },
   "homepage": "https://github.com/MonicaBartha/master-electron",
   "repository": "https://github.com/MonicaBartha/master-electron",
@@ -18,11 +21,33 @@
   "author": "Monica Bartha",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^9.0.0",
+    "electron": "^9.4.4",
     "electron-builder": "^22.14.5",
     "nodemon": "^2.0.0"
   },
   "dependencies": {
+    "electron-log": "^4.4.5",
     "electron-window-state": "^5.0.3"
+  },
+  "build": {
+    "appId": "com.stackacademytv.readit",
+    "copyright": "Copyright Stackacademy.tv",
+    "publish": {
+      "provider": "github"
+    },
+    "mac": {
+      "category": "public.app-category.productivity"
+    },
+    "win": {
+      "icon": "build/icon.ico",
+      "certificateFile": "private/stackacademy.tv.pfx",
+      "certificatePassword": "",
+      "verifyUpdateCodeSignature": false,
+      "publisherName": "stackacademytv"
+    },
+    "linux": {
+      "category": "Utility",
+      "target": "snap"
+    }
   }
 }
